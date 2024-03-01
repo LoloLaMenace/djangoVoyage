@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}À propos - Mon site{% endblock %}
+{% block content %}
+<div style="margin-top: 10rem;">
+  <h1 class="titleClass">Nos voyages</h1>
+</div>
+<div class="form-recherche">
+  <form action="{% url 'voyages' %}" method="post" style="display: flex; align-items: center;" >
+    {% csrf_token %}
+    <input class="form-content2 inputsearch" type="text" placeholder="Saisir une desitnation, une envie de voyager ?"  name="arriver" />
+    <!-- <input type="text" name="depart" placeholder="Entrez le lieu de départ"> -->
+    <input id="submit-btn" type="submit" name="submit" value="RECHERCHER" />
+</form>
+</div>
+<div id="card4">
+    <ul class="d-flex">
+        {% for voyage in allVoyage%}
+
+        <form action="{% url 'reserver_voyage' voyage.id %}" method="post">
+            {% csrf_token %}
+            <div class="card" >
+                <div class="card-body">
+                  <h5 class="card-title">voyage en {{voyage.idModeTransport.mode}} </h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Le {{voyage.heuredep}}</h6>
+                  <div style="display: flex;">
+                    <h6><b>Départ:</b></h6>
+                    <p>{{voyage.depart}}</p>
+                  </div>
+                  <div style="display: flex;">
+                    <h6><b>Arriver:</b></h6>
+                    <p>{{voyage.arriver}}</p>
+                  </div>
+                  <a href="{% url 'reserver_voyage' voyage.id %}">
+                    <button type="submit" class="btn btn-primary">Réserver</button>
+                </a>
+                </div>
+              </div>
+        </form>
+        
+        
+            
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

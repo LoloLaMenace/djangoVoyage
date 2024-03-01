@@ -1,0 +1,21 @@
+# Ignore les fichiers générés par Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+
+# Ignore les fichiers créés par l'environnement virtuel Python
+venv/
+*.swp
+
+# Ignore les fichiers spécifiques au système d'exploitation
+*.DS_Store
+
+# Ignore les fichiers de configuration locaux
+*.ini
+*.env
+
+# Ignore les fichiers de sauvegarde
+*.bak
+*.backup

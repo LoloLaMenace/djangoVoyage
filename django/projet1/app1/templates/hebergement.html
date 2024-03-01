@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}À propos - Mon site{% endblock %}
+{% block content %}
+<div style="margin-top: 10rem;">
+  <h1 class="titleClass">Nos hebergements</h1>
+</div>
+<div class="form-recherche">
+  <form action="{% url 'hebergements' %}" method="post" style="display: flex; align-items: center;" >
+    {% csrf_token %}
+    <input class="form-content2 inputsearch" type="text" placeholder="Saisir une ville où vous faire héberger ?"  name="ville" />
+    <!-- <input type="text" name="depart" placeholder="Entrez le lieu de départ"> -->
+    <input id="submit-btn" type="submit" name="submit" value="RECHERCHER" />
+</form>
+</div>
+<div id="card4">
+  <ul class="d-flex">
+    {% for unHebergement in allHebergements %}
+      <div class="card" >
+        <div class="card-body">
+          <h5 class="card-title">Ville : {{ unHebergement.ville }}</h5>
+          <p class="card-text">Adresse : {{ unHebergement.adresse }}</p>
+          <p class="card-text">Code postal : {{ unHebergement.cp }}</p>
+          <p class="card-text">Prix par nuit : {{ unHebergement.prixNuit }}</p>
+          <form action="{% url 'reserver_hebergement' unHebergement.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Réserver</button>
+          </form>
+        </div>
+      </div>
+    {% endfor %}
+
+  </ul>
+</div>
+
+{% endblock %}

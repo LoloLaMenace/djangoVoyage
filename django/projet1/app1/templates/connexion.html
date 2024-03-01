@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}À propos - Mon site{% endblock %}
+{% block content %}
+{% if request.session.prenom_utilisateur %}
+  <div id="card">
+    <div id="card-content">
+        <div id="card-title">
+            <h2>LOGOUT <i class="fa-solid fa-arrow-right-from-bracket"></i></h2>
+            <div class="underline-title"></div>
+        </div>
+        <form action="{% url 'logout' %}" method="post">
+          {% csrf_token %}
+          <div style="display: flex; justify-content: center; margin-top: 5rem;">
+            <input id="submit-btn" type="submit" name="submit" value="DECONNEXION"> </input>
+          </div>
+      </form>
+    </div>
+  </div>
+{% else %}     
+    <div id="card">
+        <div id="card-content">
+            <div id="card-title">
+                <h2>LOGIN</h2>
+                <div class="underline-title"></div>
+            </div>
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+                <form method="post" class="form">
+                    {% csrf_token %}
+                    <label for="prenom" style="padding-top:13px">&nbsp;Prenom</label>
+                    <input type="text" class="form-content" autocomplete="off" id="prenom" name="prenom"/>
+                    
+                    
+                    <label for="mdp" style="padding-top:22px">&nbsp;Mot de passe</label>
+                    <input id="mdp" class="form-content" type="password"  name="mdp" required />
+                   
+                    
+                    <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+                    <a href="{% url 'inscription' %}" id="signup">Vous n'avez pas de compte ?</a>
+                </form>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}

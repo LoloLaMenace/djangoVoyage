@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}À propos - Mon site{% endblock %}
+{% block content %}<h1>Réservations de l'utilisateur</h1>
+<div class="d-flex" style="margin-top: 15rem;">
+    {% if reservations %}
+        {% for reservation in reservations %}
+        <div style="padding: 15px 15px 15px 15px;">
+          <div class="card">
+              <div class="card-body">
+                  {% if reservation.type == 0 %}
+                      <h1>Voyage</h1>
+                      <h5 class="card-title">voyage en {{reservation.voyage.idModeTransport.mode}} </h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Le {{reservation.voyage.heuredep}}</h6>
+                      <div style="display: flex;">
+                          <h6><b>Départ:</b></h6>
+                          <p>{{reservation.voyage.depart}}</p>
+                      </div>
+                      <div style="display: flex;">
+                          <h6><b>Arriver:</b></h6>
+                          <p>{{reservation.voyage.arriver}}</p>
+                      </div>
+                  {% else %}
+                      <h1>Hebergement</h1>
+                      <h5 class="card-title">Ville : {{reservation.herbergement.ville}} </h5>
+                      <h5 class="card-title mb-2 text-body-secondary">Adresse : {{reservation.herbergement.adresse}} </h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Le {{reservation.herbergement.date}}</h6>
+                      <h5 class="card-title">Prix de la nuit : {{reservation.herbergement.prixNuit}} </h5>
+                  {% endif %}
+                  {% if reservation.payer == 0 %}
+                  <form method="post" action="{% url 'payer_reservation' reservation.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary">Payer</button>
+                </form>
+                  {% else %}
+                      <h6 style="color: green;">Réservation Payé</button>
+                  {% endif %}
+              </div>
+          </div>
+      </div>
+        {% endfor %}
+    {% else %}
+        Aucune réservation trouvée pour cet utilisateur
+    {% endif %}
+</div>
+{% endblock %}

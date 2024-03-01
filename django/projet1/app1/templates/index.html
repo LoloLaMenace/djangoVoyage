@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}À propos - Mon site{% endblock %}
+{% block content %}
+<div id="card3">
+    <h1 class="titleClass">Vous voulez voyager</h1>
+    <div class="form-recherche">
+        <form action="{% url 'voyages' %}" method="post" style="display: flex; align-items: center;" >
+            {% csrf_token %}
+            <input class="form-content2 inputsearch" type="text" placeholder="Saisir une desitnation, une envie de voyager ?"  name="arriver" />
+            <!-- <input type="text" name="depart" placeholder="Entrez le lieu de départ"> -->
+            <input id="submit-btn" type="submit" name="submit" value="RECHERCHER" />
+        </form>
+    </div>
+    <h1 class="titleClass">Ou consulté nos voyages</h1>
+    <form action="{% url 'voyages' %}" method="post" style="display: flex; align-items: center; justify-content: center;" >
+        <div>
+            {% csrf_token %}
+            <input class="form-content2 inputsearch" hidden="true" type="text" placeholder="Saisir une desitnation, une envie de voyager ?"  name="arriver" />
+
+            <input id="submit-btn2" type="submit"  name="submit" value="NOS VOYAGES" >
+        </div>
+    </form>
+</div>
+{% endblock %}

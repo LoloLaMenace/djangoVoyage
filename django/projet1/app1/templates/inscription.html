@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}À propos - Mon site{% endblock %}
+{% block content %}
+<div id="card2">
+    <div id="card-content2">
+      <div id="card-title2">
+        <h2>INSCRIPTION</h2>
+        <div class="underline-title"></div>
+      </div>
+    <form method="post" class="form">
+        {% csrf_token %}
+        <label for="prenom" style="padding-top:13px">&nbsp;Prenom</label>
+        <input type="text" class="form-content" autocomplete="off" id="prenom" name="prenom"/>
+        <label for="nom" style="padding-top:13px">&nbsp;Nom</label>
+        <input type="text" class="form-content" autocomplete="off" id="nom" name="nom"/>
+        <label for="tel" style="padding-top:13px">&nbsp;Telephone</label>
+        <input type="text" class="form-content" autocomplete="off" id="tel" name="tel"/>
+        <label for="adress" style="padding-top:13px">&nbsp;Adresse</label>
+        <input type="text" class="form-content" autocomplete="off" id="adress" name="adress"/>
+        <label for="mdp" style="padding-top:22px">&nbsp;Mot de passe</label>
+        <input id="motDePase" class="form-content" type="password"  name="motDePase" required />
+        <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+        <a href="{% url 'connexion' %}" id="signup">Vous avez déja un compte ?</a>
+    </form>
+    </div>
+    </div>
+    {% endblock %}

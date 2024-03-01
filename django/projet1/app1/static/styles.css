@@ -1,0 +1,232 @@
+
+
+
+  main, body {
+    /* background-image: linear-gradient(to top right, #080125, #210e77, #ed09ed, rgb(212, 0, 67)); */
+    background-image: url(https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  label {
+    font-family: "Raleway", sans-serif;
+    font-size: 11pt;
+  }
+  #forgot-pass {
+    color: #2dbd6e;
+    font-family: "Raleway", sans-serif;
+    font-size: 10pt;
+    margin-top: 3px;
+    text-align: right;
+  }
+  h2{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  #card2 {
+    backdrop-filter: blur(8px); /* Appliquer le flou au fond de la carte */
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond semi-transparente */
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: 410px;
+    margin: 6rem auto 8.1rem auto;
+    width: 635px;
+  }
+  #card-content2 {
+    padding: 12px 44px;
+  }
+  #card-title2 {
+    font-family: "Raleway Thin", sans-serif;
+    letter-spacing: 4px;
+    padding-bottom: 23px;
+    padding-top: 13px;
+    text-align: center;
+  }
+  #card2{
+    backdrop-filter: blur(8px); /* Appliquer le flou au fond de la carte */
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond semi-transparente */
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: 610px;
+    margin: 6rem auto 8.1rem auto;
+    width: 329px;
+  }
+
+  #card3 {
+    backdrop-filter: blur(8px); /* Appliquer le flou au fond de la carte */
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond semi-transparente */
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: auto;
+    margin: 15rem auto 8rem auto;
+    width: 75%;
+  }
+  #card4 {
+    backdrop-filter: blur(8px); /* Appliquer le flou au fond de la carte */
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond semi-transparente */
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: auto;
+    margin: 5rem auto 8rem auto;
+    width: 75%;
+  }
+  #card {
+    backdrop-filter: blur(8px); /* Appliquer le flou au fond de la carte */
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond semi-transparente */
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: 410px;
+    margin: 6rem auto 8.3rem auto;
+    width: 329px;
+  }
+  #card-content {
+    padding: 12px 44px;
+  }
+  #card-title {
+    font-family: "Raleway Thin", sans-serif;
+    letter-spacing: 4px;
+    padding-bottom: 23px;
+    padding-top: 13px;
+    text-align: center;
+  }
+  .card-input{
+    border-radius: 15px;
+  }
+  #signup {
+    color: #ab0303;
+    font-family: "Raleway", sans-serif;
+    font-size: 10pt;
+    margin-top: 16px;
+    text-align: center;
+  }
+  #submit-btn {
+    background-image: linear-gradient(to top right, #251901, #ff0000, #eddd09);
+    border: none;
+    border-radius: 21px;
+    box-shadow: 0px 1px 8px #850404;
+    cursor: pointer;
+    color: white;
+    font-family: "Raleway SemiBold", sans-serif;
+    height: 42.3px;
+    transition: 0.25s;
+    width: 153px;
+    margin: 15px 5px 10px 5px;
+  }
+  #submit-btn:hover {
+    box-shadow: 0px 1px 18px #b81702;
+  }
+  .form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-border {
+    background-image: linear-gradient(to top right, #251901, #ff0000, #eddd09);
+    height: 1px;
+    width: 80%;
+  }
+  .form-content {
+    background: #fbfbfb;
+    border: none;
+    outline: none;
+    padding: 7px 0px 7px 0px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .form-content2{
+    background: #fbfbfb;
+    border: none;
+    outline: none;
+    padding: 7px 10px 7px 10px;
+    border-radius: 100px;
+    display: flex;
+    text-align: start;
+    width: 25rem;
+  }
+
+  .underline-title {
+    background-image: linear-gradient(to top right, #251901, #ff0000, #eddd09);
+    height: 2px;
+    margin: -1.1rem auto 0 auto;
+    width: 89px;
+  }
+  
+  nav{
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(8px); /* Appliquer le flou au fond de la carte */
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond semi-transparente */
+    color: white !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+.nav-link{
+    color: white !important;
+}
+
+.form-recherche{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.card{
+  padding: auto;
+}
+
+.ulNav{
+  display: flex;
+  
+}
+
+li{
+  margin: 1rem 7em 0rem 7em;
+}
+ul {
+  list-style-type: none;
+}
+
+a{
+  display: flex;
+  justify-content: space-around;
+}
+
+.iconbtn:hover{
+  transition: 2s;
+  transform: rotate(1turn);
+}
+
+.titleClass{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+
+#submit-btn2 {
+  background-image: linear-gradient(to top right, #080125, #210e77, #ed09ed, rgb(212, 0, 67));
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #6d0485;
+  cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  transition: 0.25s;
+  width: 153px;
+  margin: 15px 5px 10px 5px;
+}
+#submit-btn2:hover {
+  box-shadow: 0px 1px 18px #e426b2;
+}
